@@ -1,0 +1,39 @@
+{
+  "name": "dual-quat-to-mat4",
+  "version": "0.0.1",
+  "description": "Convert a dual quaternion into a 4x4 matrix",
+  "main": "src/dual-quat-to-mat4",
+  "scripts": {
+    "test": "standard && tape test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chinedufn/dual-quat-to-mat4.git"
+  },
+  "keywords": [
+    "mat4",
+    "dual",
+    "quat",
+    "quaternion",
+    "skinning",
+    "skeletal",
+    "animation",
+    "linear",
+    "blend",
+    "vertex",
+    "animate",
+    "collada",
+    "webgl"
+  ],
+  "author": "Chinedu Francis Nwafili <frankie.nwafili@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chinedufn/dual-quat-to-mat4/issues"
+  },
+  "homepage": "https://github.com/chinedufn/dual-quat-to-mat4#readme",
+  "devDependencies": {
+    "mat4-to-dual-quat": "^1.0.0",
+    "standard": "^8.6.0",
+    "tape": "^4.6.3"
+  }
+}
