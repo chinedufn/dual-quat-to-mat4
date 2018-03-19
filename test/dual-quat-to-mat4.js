@@ -7,10 +7,13 @@ var dualQuatToMat4 = require('../')
 test('Convert a dual quaternion to a 4x4 matrix and then back to dual quat', function (t) {
   // Use a dual quaternion that came from an identity matrix
   var expectedOriginalDualQuat = [0, 0, 0, 1, 0, 0, 0, 0]
-
+  var expectedDualQuatOut = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+  var out = []
   var convertedMatrix = dualQuatToMat4(
+    out,
     expectedOriginalDualQuat
   )
+  t.deepEqual(out, expectedDualQuatOut)
   var convertedDualQuat = mat4ToDualQuat(convertedMatrix)
 
   t.deepEqual(convertedDualQuat, expectedOriginalDualQuat)
@@ -22,8 +25,9 @@ test('Convert a dual quaternion to a 4x4 matrix and then back to dual quat', fun
 test('Convert a messier dual quaternion into mat4 and back', function (t) {
   // Use a messier dual quat that I know is a valid rigid transformation (grabbed it from Blender)
   var expectedOriginalDualQuat = [-0.27447058422968623, -0.016130971701251967, 0.05674661681750636, 0.9597840903036474, -0.0017457254491423332, -0.12487046113525742, -0.011375334994009861, -0.0019253500880238306]
-
+  var out = []
   var convertedMatrix = dualQuatToMat4(
+    out,
     expectedOriginalDualQuat
   )
   var convertedDualQuat = mat4ToDualQuat(convertedMatrix)

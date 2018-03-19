@@ -27,20 +27,28 @@ $ npm install --save dual-quat-to-mat4
 
 ```js
 var dualQuatToMat4 = require('dual-quat-to-mat4')
+var matrix = []
+var dualQuat = dualQuatToMat4(matrix, [0, 0, 0, 1, 0, 0, 0, 0])
 
-var dualQuat = dualQuatToMat4([0, 0, 0, 1, 0, 0, 0, 0])
-
-console.log(dualQuat)
+console.log(matrix)
 // [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
 ```
 
 ## API
 
-### `dualQuatToMat4(matrix)` -> `Array[16]`
+### `dualQuatToMat4(out, dualQuat)` -> `Array[16]`
 
-#### dual quaternion
+#### out
 
-*Requred*
+*Required*
+
+Type: `Array[*]`
+
+An allocated array that will get elements [0] through [15] set as your output matrix
+
+#### dualQuat
+
+*Required*
 
 Type: `Array[8]`
 
