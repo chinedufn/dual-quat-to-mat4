@@ -1,6 +1,6 @@
 {
   "name": "dual-quat-to-mat4",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert a dual quaternion into a 4x4 matrix",
   "main": "src/dual-quat-to-mat4",
   "scripts": {
